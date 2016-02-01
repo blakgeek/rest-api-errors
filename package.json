@@ -1,6 +1,6 @@
 {
   "name": "rest-api-errors",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Common errors to that can be thrown to simplify promise based api implementations",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,14 @@
     "error",
     "promise"
   ],
-  "author": "blakgeek",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blakgeek/rest-api-errors.git"
+  },
+  "author": "Carlos \"blakgeek\" Lawton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blakgeek/rest-api-errors/issues"
+  },
+  "homepage": "https://github.com/blakgeek/rest-api-errors"
 }

@@ -31,7 +31,7 @@ function InvalidStateError(code, message) {
 InvalidStateError.prototype = Object.create(APIError.prototype);
 
 function EntityTooLarge(code, message) {
-	APIError.call(this, 419, code, message);
+	APIError.call(this, 413, code, message);
 }
 EntityTooLarge.prototype = Object.create(APIError.prototype);
 
