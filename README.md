@@ -1,4 +1,4 @@
-# Rest Api Error
+# Rest Api Error for Nodejs
 
 I created this because I like promises and I like rest.  It makes error handling in promise chains simple and clean.
 It also means you don't need to remember the right http status codes to return for various errors.
