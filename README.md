@@ -1,6 +1,7 @@
 # Rest Api Error
 
-I created this because I really like Promises and this makes error handling much simpler in my rest endpoints.
+I created this because I like promises and I like rest.  It makes error handling in promise chains simple and clean.
+It also means you don't need to remember the right http status codes to return for various errors.
 
 ## How do I use it?
 
