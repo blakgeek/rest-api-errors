@@ -1,13 +1,15 @@
 # Rest Api Error for Nodejs
 
-I created this because I like promises and I like rest.  It makes error handling in promise chains simple and clean.
-It also means you don't need to remember the right http status codes to return for various errors.
+## What is this?
+It's a set of errors that can be thrown to break a promise chain in a clean and logical way when creating APIs using NodeJS.
+I created it because I like promises and I like rest and I like simple. 
+It also keeps me from having to remember the right http status codes to return for various errors.
 
 ## How do I use it?
 
 Here's how you'd use it to make sure some can delete a thang.
 
-```
+```Javascript
 // delete a thang
 app.delete('/thangs/:id', function (req, resp) {
 
@@ -49,47 +51,46 @@ app.delete('/thangs/:id', function (req, resp) {
 };
 ```
 
-## TODO
-Add the following errors
-* 4xx Client Error
-* 400 Bad Requestd
-* 402 Payment Required
-* 405 Method Not Allowed
-* 406 Not Acceptable
-* 407 Proxy Authentication Required
-* 408 Request Timeout
+## What errors are supported?
+ 
+All of following are implemented.  Throw them to your hearts content.
+* 400 BadRequest
+* 402 PaymentRequired
+* 405 MethodNotAllowed
+* 406 NotAcceptable
+* 407 ProxyAuthenticationRequired
+* 408 RequestTimeout
 * 410 Gone
-* 411 Length Required
-* 412 Precondition Failed
-* 414 Request-URI Too Long
-* 415 Unsupported Media Type
-* 416 Requested Range Not Satisfiable
-* 417 Expectation Failed
-* 418 I'm a teapot (RFC 2324)
-* 420 Enhance Your Calm (Twitter)
-* 423 Locked (WebDAV)
-* 424 Failed Dependency (WebDAV)
-* 425 Reserved for WebDAV
-* 426 Upgrade Required
-* 428 Precondition Required
-* 429 Too Many Requests
-* 431 Request Header Fields Too Large
-* 444 No Response (Nginx)
-* 449 Retry With (Microsoft)
-* 450 Blocked by Windows Parental Controls (Microsoft)
-* 499 Client Closed Request (Nginx)
-* 5xx Server Error
-* 500 Internal Server Error
-* 501 Not Implemented
-* 502 Bad Gateway
-* 503 Service Unavailable
-* 504 Gateway Timeout
-* 505 HTTP Version Not Supported
-* 506 Variant Also Negotiates (Experimental)
-* 507 Insufficient Storage (WebDAV)
-* 508 Loop Detected (WebDAV)
-* 509 Bandwidth Limit Exceeded (Apache)
-* 510 Not Extended
-* 511 Network Authentication Required
-* 598 Network read timeout error
-* 599 Network connect timeout error
+* 411 LengthRequired
+* 412 PreconditionFailed
+* 414 RequestUriTooLong
+* 415 UnsupportedMediaType
+* 416 RequestedRangeNotSatisfiable
+* 417 ExpectationFailed
+* 418 IAmATeapot
+* 420 EnhanceYourCalm
+* 423 Locked
+* 424 FailedDependency
+* 426 UpgradeRequired
+* 428 PreconditionRequired
+* 429 TooManyRequests
+* 431 RequestHeaderFieldsTooLarge
+* 444 NoResponse
+* 449 RetryWith
+* 450 BlockedbyWindowsParentalControls
+* 499 ClientClosedRequest
+* 500 InternalServerError
+* 501 NotImplemented
+* 502 BadGateway
+* 503 ServiceUnavailable
+* 504 GatewayTimeout
+* 505 HTTPVersionNotSupported
+* 506 VariantAlsoNegotiates
+* 507 InsufficientStorage
+* 508 LoopDetected
+* 509 BandwidthLimitExceeded
+* 510 NotExtended
+* 511 NetworkAuthenticationRequired
+* 598 NetworkReadTimeout
+* 599 NetworkConnectTimeout
+ 
