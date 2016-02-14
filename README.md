@@ -1,4 +1,4 @@
-# Rest Api Error for Nodejs
+# Rest Api Errors for Nodejs
 
 ## What is this?
 It's a set of errors that can be thrown to break a promise chain in a clean and logical way when creating APIs using NodeJS.
@@ -7,7 +7,7 @@ It also keeps me from having to remember the right http status codes to return f
 
 ## How do I use it?
 
-Here's how you'd use it to make sure some can delete a thang.
+Here's an example of an endpoint to delete a Thang.
 
 ```Javascript
 // delete a thang
