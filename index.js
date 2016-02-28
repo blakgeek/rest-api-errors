@@ -310,6 +310,7 @@ function EntityTooLarge(code, message) {
 }
 EntityTooLarge.prototype = Object.create(APIError.prototype);
 
+exports.APIError = APIError;
 exports.BadRequest = BadRequest;
 exports.Unauthorized = Unauthorized;
 exports.PaymentRequired = PaymentRequired;
