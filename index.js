@@ -68,5 +68,5 @@ const apiErrors = Object.entries({
     };
     return map;
 }, {});
-console.log(apiErrors);
+
 module.exports = apiErrors;
