@@ -1,4 +1,4 @@
-class ApiError {
+class APIError {
     constructor(status, code, message) {
         this.status = status;
         this.code = code;
@@ -61,7 +61,7 @@ const apiErrors = Object.entries({
     NetworkConnectionTimeout: 599,
 }).reduce((map, [name, status]) => {
 
-    map[`${name}Error`] = map[name] = class extends ApiError {
+    map[`${name}Error`] = map[name] = class extends APIError {
         constructor(code, message) {
             super(status, code, message);
         }
@@ -71,6 +71,5 @@ const apiErrors = Object.entries({
 
 module.exports = {
     ...apiErrors,
-    ApiError,
-    APIError: ApiError
+    APIError
 };
