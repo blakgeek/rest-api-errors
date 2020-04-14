@@ -18,14 +18,13 @@ app.delete('/thangs/:id', function (req, resp) {
 
     Thang.findOne({
         _id: id
-    }).then(function (thang) {
+    }).then(thang => {
         if (!thang) {
             // give em a 404 with custom error code and message
-            throw new NotFound('thang_not_found', "I can't find that thang :(");
+            throw new NotFoundError('thang_not_found', "I can't find that thang :(");
         } else if (thang.createdBy !== username) {
-            
             // give em a generic 403
-            throw new Forbidden();
+            throw new ForbiddenError();
         }
         // it's all good so actually delete the thang
         return Thang.deleteOne({
@@ -36,17 +35,19 @@ app.delete('/thangs/:id', function (req, resp) {
 
         resp.status(204).end();
 
-    }).catch(ApiError, function (err) {
-
-        // handle any ApiError with a simple elegant response
-        resp.status(err.status).send({
-            code: err.code,
-            message: err.message
-        });
     }).catch(function (err) {
+
+        if(err instanceof ApiError) {
         
-        // handle all other errors in some kinda way
-        handleError(resp, err);
+            // handle any ApiError with a simple elegant response
+            resp.status(err.status).send({
+                code: err.code,
+                message: err.message
+            });
+        } else {
+            // handle all other errors in some kinda way
+            handleError(resp, err);
+        }
     });
 };
 ```
