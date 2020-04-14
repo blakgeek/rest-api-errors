@@ -69,4 +69,8 @@ const apiErrors = Object.entries({
     return map;
 }, {});
 
-module.exports = apiErrors;
+module.exports = {
+    ...apiErrors,
+    ApiError,
+    APIError: ApiError
+};
