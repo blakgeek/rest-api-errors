@@ -36,7 +36,7 @@ const apiErrors = Object.entries({
     InvalidState: 422,
     Locked: 423,
     FailedDependency: 424,
-    ReservedforWebDAV: 425,
+    ReservedForWebDAV: 425,
     UpgradeRequired: 426,
     PreconditionRequired: 428,
     TooManyRequests: 429,
