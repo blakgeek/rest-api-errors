@@ -4,7 +4,8 @@
     "description": "Common errors that can be thrown to simplify promise based api implementations",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "prepublishOnly": "./generateTypes.js",
+        "generate:types": "./generateTypes.js"
     },
     "keywords": [
         "rest",
@@ -24,5 +25,8 @@
     "bugs": {
         "url": "https://github.com/blakgeek/rest-api-errors/issues"
     },
-    "homepage": "https://github.com/blakgeek/rest-api-errors"
+    "homepage": "https://github.com/blakgeek/rest-api-errors",
+    "devDependencies": {
+        "uniq": "^1.0.1"
+    }
 }
